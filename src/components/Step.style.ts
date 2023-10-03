@@ -46,7 +46,7 @@ const StepStyles = sva({
             },
             Active: {
                 stepIcon: {
-                    backgroundColor: 'linear-gradient(90deg, rgb(217, 52, 118) 0%, rgb(229, 127, 57) 100%)',
+                    background: 'linear-gradient(90deg, rgb(217, 52, 118) 0%, rgb(229, 127, 57) 100%)',
                 },
                 stepText: {
                     color: 'rgb(80, 86, 98)',

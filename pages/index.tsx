@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { SidebarTab } from "../src/components/SidebarTab";
+import { StepBar } from "../src/components/StepBar";
 
 export default function Home() {
   return (
@@ -16,45 +16,10 @@ export default function Home() {
           style={{
             backgroundColor: "rgb(25,25,25)",
             padding: "10px 0px",
-            width: "300px",
+            width: "750px",
           }}
         >
-          <SidebarTab
-            status="Selected"
-            label="Home"
-            icon={
-              <Image
-                src="/inbox.png"
-                alt="Vercel Logo"
-                width={16}
-                height={16}
-              />
-            }
-          />
-          <SidebarTab
-            status="Inactive"
-            label="Home"
-            icon={
-              <Image
-                src="/inbox.png"
-                alt="Vercel Logo"
-                width={16}
-                height={16}
-              />
-            }
-          />
-          <SidebarTab
-            status="Highlighted"
-            label="Home"
-            icon={
-              <Image
-                src="/inbox.png"
-                alt="Vercel Logo"
-                width={16}
-                height={16}
-              />
-            }
-          />
+          <StepBar />
         </div>
       </main>
     </div>

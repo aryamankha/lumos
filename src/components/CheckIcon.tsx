@@ -4,5 +4,5 @@ const CheckIconComponent = styled.img`
   height: 14px;
 `;
 export const CheckIcon = ({ override }: { override?: React.CSSProperties }) => {
-  return <CheckIconComponent src="./checkIcon.svg" style={override} />;
+  return <CheckIconComponent src="/checkIcon.svg" style={override} />;
 };
