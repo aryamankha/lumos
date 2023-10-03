@@ -44,30 +44,6 @@ export default function Home() {
             }
           />
           <SidebarTab
-            status="Inactive"
-            label="Home"
-            icon={
-              <Image
-                src="/inbox.png"
-                alt="Vercel Logo"
-                width={16}
-                height={16}
-              />
-            }
-          />
-          <SidebarTab
-            status="Inactive"
-            label="Home"
-            icon={
-              <Image
-                src="/inbox.png"
-                alt="Vercel Logo"
-                width={16}
-                height={16}
-              />
-            }
-          />
-          <SidebarTab
             status="Highlighted"
             label="Home"
             icon={
