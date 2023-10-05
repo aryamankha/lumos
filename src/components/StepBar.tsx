@@ -2,18 +2,38 @@ import { DashedSeparator } from "./DashedSeparator";
 import { Step } from "./Step";
 import { StepBar } from "./StepBar.style";
 
-export const StepBarComponent = () => {
-  return (
-    <StepBar.Root>
-      <Step status="Done" number="1" text="Assign" />
-      <DashedSeparator />
-      <Step status="Active" number="2" text="Review" />
-      <DashedSeparator />
-      <Step status="To Do" number="3" text="Remove & Upload Evidence" />
-      <DashedSeparator />
-      <Step status="To Do" number="4" text="Done" />
-    </StepBar.Root>
-  );
+type Step = {
+  name: string;
+  number: string;
+};
+
+interface StepBarProps {
+  steps: Step[];
+  currentIndex: number;
+}
+
+export const StepBarComponent = (props: StepBarProps) => {
+  const { steps, currentIndex } = props;
+  const Steps = steps.map((step, index) => {
+    const status =
+      index < currentIndex
+        ? "Done"
+        : index === currentIndex
+        ? "Active"
+        : "To Do";
+    return (
+      <>
+        <Step
+          status={status}
+          number={step.number}
+          text={step.name}
+          key={index}
+        />
+        {index < steps.length - 1 && <DashedSeparator />}
+      </>
+    );
+  });
+  return <StepBar.Root>{Steps}</StepBar.Root>;
 };
 
 export { StepBarComponent as StepBar };

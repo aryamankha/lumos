@@ -8,7 +8,12 @@ export type StepProps = {
 }
 
 const StepStyles = sva({
-    slots: ["root", "stepIcon", "stepIconText", "stepText"],
+    slots: [
+        "root", 
+        "stepIcon", 
+        "stepIconText", 
+        "stepText"
+    ],
     base: {
         root: {
             display: 'flex',
